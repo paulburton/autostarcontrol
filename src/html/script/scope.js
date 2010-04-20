@@ -1,5 +1,6 @@
 var SlewRate = {
-	Max    : 9
+	Min    : 2,
+	Max    : 8
 };
 
 var Direction = {
@@ -126,6 +127,11 @@ Scope.prototype.command = function (cmd, resp)
 
 Scope.prototype.setSlewRate = function (rate)
 {
+	if (rate < SlewRate.Min)
+		rate = SlewRate.Min;
+	if (rate > SlewRate.Max)
+		rate = SlewRate.Max;
+	
 	this.command ("Sw" + rate, false);
 	
 	this._rate = rate;
