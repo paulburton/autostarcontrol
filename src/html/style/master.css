@@ -30,8 +30,10 @@ a
 .title
 {
 	display: block;
+	height: 15px;
 	padding: 2px;
 
+	font-size: 12px;
 	font-weight: bold;
 
 	text-align: center;
@@ -131,7 +133,7 @@ a
 	left: 5px;
 	top: 132px;
 	width: 100px;
-	height: 120px;
+	height: 160px;
 
 	border: 1px dashed #8F8;
 }
@@ -139,8 +141,8 @@ a
 #rate a
 {
 	display: block;
-	height: 19px;
-	padding: 3px;
+	height: 16px;
+	padding: 2px;
 
 	text-align: center;
 	

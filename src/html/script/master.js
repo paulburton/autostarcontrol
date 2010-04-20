@@ -30,34 +30,17 @@ $(function ()
 		return false;
 	});
 
-	$("#rate_max").click (function ()
+	for (i = 2; i <= 8; i++)
 	{
-		slewrate = SlewRate.Max;
-		$("#rate a").removeClass ("active");
-		$("#rate_max").addClass ("active");
-		return false;
-	});
-	$("#rate_find").click (function ()
-	{
-		slewrate = SlewRate.Find;
-		$("#rate a").removeClass ("active");
-		$("#rate_find").addClass ("active");
-		return false;
-	});
-	$("#rate_center").click (function ()
-	{
-		slewrate = SlewRate.Center;
-		$("#rate a").removeClass ("active");
-		$("#rate_center").addClass ("active");
-		return false;
-	});
-	$("#rate_guide").click (function ()
-	{
-		slewrate = SlewRate.Guide;
-		$("#rate a").removeClass ("active");
-		$("#rate_guide").addClass ("active");
-		return false;
-	});
+		$("#rate_" + i).attr ("rate", i);
+		$("#rate_" + i).click (function ()
+		{
+			slewrate = $(this).attr ("rate");
+			$("#rate a").removeClass ("active");
+			$(this).addClass ("active");
+			return false;
+		});
+	}
 });
 
 function onScopeReady ()

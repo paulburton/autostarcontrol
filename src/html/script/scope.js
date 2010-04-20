@@ -1,8 +1,5 @@
 var SlewRate = {
-	Guide  : 0,
-	Center : 1,
-	Find   : 2,
-	Max    : 3
+	Max    : 9
 };
 
 var Direction = {
@@ -129,14 +126,7 @@ Scope.prototype.command = function (cmd, resp)
 
 Scope.prototype.setSlewRate = function (rate)
 {
-	if (rate == SlewRate.Guide)
-		this.command ("RG", false);
-	else if (rate == SlewRate.Center)
-		this.command ("RC", false);
-	else if (rate == SlewRate.Find)
-		this.command ("RM", false);
-	else if (rate == SlewRate.Max)
-		this.command ("RS", false);
+	this.command ("Sw" + rate, false);
 	
 	this._rate = rate;
 };

@@ -1,4 +1,4 @@
-TARGET=scopecontrol
+TARGET=ascontrol
 
 CFILES=$(wildcard src/*.c)
 OFILES=$(patsubst %.c, %.o, $(CFILES))
