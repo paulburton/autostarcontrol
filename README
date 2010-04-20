@@ -1,0 +1,10 @@
+Meade Autostar control app
+
+Author: Paul Burton <paulburton89@gmail.com>
+
+This app controls the mount using it's AUX port, connected to the PC
+via an mbed microcontroller running code to translate the commands sent
+to it via serial/USB to the Autostar's I2C-ish protocol, and return the
+responses if applicable. It should be fairly trivial to adapt it to use
+something other than the mbed (eg. the actual Meade #506 cable) but I
+have no plans to do so.
